@@ -17,10 +17,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CoursesComponent } from './courses/courses.component';
 import { TableComponent } from './instructors/table/table.component';
 import { FileSelectorComponent } from './file-selector/file-selector.component';
-import { Busy } from './busy';
 import { ClassroomComponent } from './classroom/classroom.component';
 import { ClassroomTableComponent } from './classroom/classroom-table/classroom-table.component';
-import { CourseComponent } from './course/course.component';
+import { CourseTableComponent } from './courses/course-table/course-table.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +31,7 @@ import { CourseComponent } from './course/course.component';
     ClassroomTableComponent,
     FileSelectorComponent,
     ClassroomComponent,
-    CourseComponent
+    CourseTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +44,7 @@ import { CourseComponent } from './course/course.component';
     MatListModule,
     MatTableModule,
     RouterModule,
-    NgxCsvParserModule
+    NgxCsvParserModule,
   ],
   providers: [
     provideAnimationsAsync()

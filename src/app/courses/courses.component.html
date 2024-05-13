@@ -1,2 +1,13 @@
-<p>courses works!</p>
-<router-outlet/>
+<div class="content-container">
+    <!-- Contents -->
+    <div class="button-container">
+        <!-- Button container -->
+        <app-file-selector buttonColor="primary" buttonText="Load From CSV" (fileSelected)="onFileSelected($event)"></app-file-selector>
+    </div>
+
+    <div class="table-container">
+        <!-- Table container -->
+        <app-course-table [dataSource]="dataSource"></app-course-table>
+    </div>
+</div>
+<router-outlet></router-outlet>
