@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
 export class ClassroomTableComponent {
   @Input() dataSource: any[] = [];
 
-  displayedColumns: string[] = ['name', 'capacity'];
+  displayedColumns: string[] = ['name', 'capacity', 'edit'];
 }
