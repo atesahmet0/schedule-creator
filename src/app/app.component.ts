@@ -14,7 +14,7 @@ export class AppComponent {
   sidenav!: MatSidenav;
   isMobile = true;
 
-  constructor(private observer: BreakpointObserver) {}
+  constructor(private observer: BreakpointObserver, ) {}
 
   ngOnInit(){
     // Make side navigation responsive

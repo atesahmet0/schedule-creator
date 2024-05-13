@@ -8,19 +8,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 
+import {MatTable, MatTableModule} from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { InstructorsComponent } from './instructors/instructors.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CoursesComponent } from './courses/courses.component';
+import { TableComponent } from './instructors/table/table.component';
+import { FileSelectorComponent } from './file-selector/file-selector.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InstructorsComponent,
     DashboardComponent,
-    CoursesComponent
+    CoursesComponent,
+    TableComponent,
+    FileSelectorComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +36,7 @@ import { CoursesComponent } from './courses/courses.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
+    MatTableModule,
     RouterModule
   ],
   providers: [
