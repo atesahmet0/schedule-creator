@@ -7,8 +7,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
-
-import {MatTable, MatTableModule} from '@angular/material/table';
+import { NgxCsvParserModule } from 'ngx-csv-parser';
+import { MatTableModule } from '@angular/material/table';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -17,6 +17,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CoursesComponent } from './courses/courses.component';
 import { TableComponent } from './instructors/table/table.component';
 import { FileSelectorComponent } from './file-selector/file-selector.component';
+import { Busy } from './busy';
+import { ClassroomComponent } from './classroom/classroom.component';
+import { ClassroomTableComponent } from './classroom/classroom-table/classroom-table.component';
+import { CourseComponent } from './course/course.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,10 @@ import { FileSelectorComponent } from './file-selector/file-selector.component';
     DashboardComponent,
     CoursesComponent,
     TableComponent,
-    FileSelectorComponent
+    ClassroomTableComponent,
+    FileSelectorComponent,
+    ClassroomComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +44,8 @@ import { FileSelectorComponent } from './file-selector/file-selector.component';
     MatSidenavModule,
     MatListModule,
     MatTableModule,
-    RouterModule
+    RouterModule,
+    NgxCsvParserModule
   ],
   providers: [
     provideAnimationsAsync()

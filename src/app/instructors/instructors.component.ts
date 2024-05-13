@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgxCsvParser, NgxCSVParserError } from 'ngx-csv-parser';
 import { Busy } from '../busy';
 import { BusyService } from '../busy.service';
 
@@ -10,6 +9,7 @@ import { BusyService } from '../busy.service';
 })
 export class InstructorsComponent {
   busyDict!: { [key: string]: Busy; };
+  dataSource: any[] = [];
 
   constructor(private busyService: BusyService) { }
 
@@ -18,16 +18,17 @@ export class InstructorsComponent {
       if (result) {
         this.busyDict = (result as any[][]).reduce((acc: { [key: string]: any }, row: any[]) => {
           const [name, ...rest] = row;
-          acc[name] = rest;
+          acc[name] = [name, ...rest];
           console.log("acc is: " + acc);
           return acc;
         }, {});
         console.log(this.busyDict);
+        this.dataSource = Object.values(this.busyDict);
       }
     }).catch(error => {
       console.error('Error occurred while reading CSVs', error);
     });
-}
+  }
 
 
 }
